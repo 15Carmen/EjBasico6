@@ -5,29 +5,38 @@ import java.util.Scanner;
 public class EjBasico6 {
 
     public static void main(String[] args) {
-        //Declaro el Scanenr para leer por consola
+        //Declaramos el scanner para poder leer por consola
         Scanner sc = new Scanner (System.in);
 
-        //Le pido al ususario que introduzca un numero entero
-        System.out.println("Introduzca un número entero:");
+        //Declaramos las variables num1, num2, suma, resta, multi y division
+        int num1, num2,suma, resta, multi;
+        double division;
 
-        //Declaro la variable num1 donde se guarda el numero introducido por consola y lo guardo
-        int num1=sc.nextInt();
+        /**
+         * Le pedimos al usuario que introduzca por consola un número y después
+         * le pedimos otro más. Ambos lo guardamos en las variables num
+         * anteriormente declaradas
+         */
+        System.out.println("Introduzca un número:");
+        num1=sc.nextInt();
+        System.out.println("Introduzca otro número:");
+        num2=sc.nextInt();
 
-        //Le pido al ususario que introduzca otro numero entero
-        System.out.println("Introduzca otro número entero:");
+        /**
+         * Realizamos las operaciones correspondientes sumando, restando, multiplicando
+         * y dividiendo las variables num
+         */
+        suma = num1+num2;
+        resta = num1-num2;
+        multi = num1*num2;
 
-        //Declaro la variable num2 donde se guarda el numero introducido por consola y lo guardo
-        int num2=sc.nextInt();
+        /**
+         * Destacamos la operación de división porque para resolverla debemos castear
+         * las variables num para que el resultado de la división nos pueda dar decimales
+         */
+        division = (double)num1/(double)num2;
 
-        //Declaro las variables de las operaciones donde hago los calculos usando las dos variables num introduzidas por
-        //consola anteriormente
-        int suma = num1+num2;
-        int resta = num1-num2;
-        int multi = num1*num2;
-        double division = (double)num1/(double)num2;
-
-        //Muestro por consola el resultado de las operaciones
+        //Mostramos por consola el resultado de las operaciones
         System.out.println("La suma de esos numeros es: "+suma);
         System.out.println("La resta de esos numeros es: "+resta);
         System.out.println("La multiplicación de esos numeros es: "+multi);
